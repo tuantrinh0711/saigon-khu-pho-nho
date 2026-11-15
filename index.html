@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#18231f" />
+  <title>Sài Gòn: Khu Phố Nhỏ</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.babylonjs.com/babylon.js"></script>
+  <script defer src="src/game.js"></script>
+</head>
+<body>
+  <canvas id="game" aria-label="Game 3D góc nhìn thứ ba, một nhiệm vụ giao hàng ở Sài Gòn"></canvas>
+
+  <header id="topHud" class="top-hud" hidden>
+    <div class="brand">SÀI GÒN <span>·</span> KHU PHỐ NHỎ</div>
+    <div id="clockLabel" class="clock">16:40 · SÀI GÒN</div>
+  </header>
+
+  <section id="missionPanel" class="mission-panel" aria-live="polite" hidden>
+    <div id="missionStep" class="mission-step">01 — NHẬN HÀNG</div>
+    <div id="objective" class="mission-text">Ghé xe bánh mì, nhấn E nhận bưu kiện</div>
+    <div id="status" class="mission-status">ĐƠN HÀNG 1 / 2</div>
+  </section>
+
+  <div id="interactionPrompt" class="interaction-prompt" hidden></div>
+  <div id="toast" class="toast" role="status"></div>
+
+  <footer id="controls" class="controls" hidden>
+    <span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> Đi bộ / lái xe</span>
+    <span><kbd>←</kbd><kbd>→</kbd> Quay camera</span>
+    <span><kbd>SHIFT</kbd> Chạy</span>
+    <span><kbd>E</kbd> Tương tác</span>
+    <span><kbd>R</kbd> Chơi lại</span>
+  </footer>
+
+  <section id="startScreen" class="screen">
+    <div class="screen-copy">
+      <div class="screen-location">SÀI GÒN · 16:40</div>
+      <h1>KHU PHỐ<br><em>NHỎ</em></h1>
+      <p>Một buổi chiều, một đơn hàng cần giao.<br>Đi qua góc phố và tìm khách ở đầu hẻm.</p>
+      <button id="playButton" class="primary-button">VÀO PHỐ <span>→</span></button>
+      <div class="screen-note">WASD di chuyển · E vào nhà/lên xe · ← → quay camera</div>
+    </div>
+  </section>
+
+  <section id="finishScreen" class="screen finish-screen" hidden>
+    <div class="screen-copy">
+      <div class="screen-location">ĐƠN HÀNG HOÀN TẤT</div>
+      <h2>GIAO<br><em>THÀNH CÔNG</em></h2>
+      <p>Khách đã nhận được bưu kiện.<br>Góc phố vẫn còn nhiều nơi để khám phá.</p>
+      <div id="finishTime" class="finish-time">Thời gian: 0:00</div>
+      <button id="restartButton" class="primary-button">CHƠI LẠI <span>↻</span></button>
+    </div>
+  </section>
+</body>
+</html>
