@@ -1,0 +1,4 @@
+{
+  "game.ready": "Three.js is ready. Add the new game requirements to continue.",
+  "game.startError": "The game could not start. Refresh the page or try a supported browser."
+}
